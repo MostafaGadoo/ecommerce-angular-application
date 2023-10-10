@@ -1,0 +1,34 @@
+
+<div class="box mt-5">
+    <div class="my-2 w-25">
+        <label for="" class="my-1"> Categories: </label>
+        <select class="form-control" (change)="filterCategory($event)">
+            <option value="default-category" selected>choose your category</option>
+            <option value="{{option}}" *ngFor="let option of categories">{{option}} </option>
+            
+        </select>
+    </div>
+    <div class="row" *ngIf="!loading">
+            <div class="col-md-3 col-sm-12" *ngFor="let product of products">
+                <div class="item" >
+                    <img class="img" src= "{{product.image}}" alt="">
+                    <div class="body">
+                        <h4 class="body-text">{{product?.title}}</h4>
+                        <p class="body-p">{{product.description}}</p>
+                    </div>
+                    <div class="px-3 mb-2 d-flex justify-content-between align-items-cnter">
+                        <button class="btn btn-success"> Add to cart</button>
+                        <span class="span-data">{{product.price}} L.E</span>
+                    </div>
+                </div>
+        
+            </div>
+    </div>
+
+    <div class="text-center w-100" *ngIf="loading">
+        <app-spinner>
+
+        </app-spinner>
+    </div>
+</div>
+
