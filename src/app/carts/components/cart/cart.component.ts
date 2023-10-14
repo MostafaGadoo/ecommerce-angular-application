@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-cart',
@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent {
+  cartProduct : any[] = [];
 
+  constructor () { }
+
+  ngOnInit(): void {
+    this.getcartaproduscts();
+  }
+
+  getcartaproduscts(){
+    if("cart" in localStorage){
+      this.cartProduct = JSON.parse(localStorage.getItem("cart")!);
+    }
+    console.log(this.cartProduct);
+  }
 }

@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ProductsModule } from './products/products.module';
 import { SpinnerComponent } from './shared/components/spinner/spinner.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { SpinnerComponent } from './shared/components/spinner/spinner.component'
     CommonModule,
     FormsModule,
     ProductsModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

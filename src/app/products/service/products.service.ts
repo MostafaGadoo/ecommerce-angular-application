@@ -14,15 +14,6 @@ export class ProductsService {
   constructor(private http: HttpClient) { }
 
 
-  // getAllProducts(): Observable<any[]> {
-  //   return this.http.get<any[]>(environment.baseApi + "products").pipe(
-  //     catchError((error) => {
-  //       // Handle the error here (e.g., log it or throw a custom error)
-  //       console.error('Error fetching products:', error);
-  //       return throwError('Something went wrong while fetching products.');
-  //     })
-  //   );
-  // }
   getAllProducts(){
     return this.http.get(environment.baseApi + "products");
   }
@@ -33,5 +24,9 @@ export class ProductsService {
 
   getProductByFilter(filter : string){
     return this.http.get(environment.baseApi + "products/category/" + filter);
+  }
+
+  getProductById(id : any){
+    return this.http.get(environment.baseApi + "products/" + id);
   }
 }

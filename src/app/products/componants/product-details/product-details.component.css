@@ -1,0 +1,17 @@
+.box{
+    width: 50%;
+    margin: 30px 30px;
+    height: 500px;
+}
+.main-col{
+    display: flex;
+}
+.list-item{
+    font-size: 22px;
+    margin: 20px 0;
+}
+.product-details-image{
+    width: 80%;
+    max-height: 400px;
+    min-height: 400px;
+}

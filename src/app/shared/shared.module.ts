@@ -6,13 +6,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { SpinnerComponent } from './components/spinner/spinner.component';
+import { SelectComponent } from './components/select/select.component';
 
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    SelectComponent
   ],
   imports: [
   BrowserModule,
@@ -23,7 +25,8 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
   ],
   exports: [
     HeaderComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    SelectComponent
   ]
 })
 export class SharedModule { }
