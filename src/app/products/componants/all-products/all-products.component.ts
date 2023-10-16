@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../../service/products.service';
+import { product_interface } from '../../models/products-model';
 
 @Component({
   selector: 'app-all-products',
@@ -8,8 +9,8 @@ import { ProductsService } from '../../service/products.service';
 })
 
 export class AllProductsComponent implements OnInit {
-  products: any[] = [];
-  categories: any[] = [];
+  products: product_interface[] = [];
+  categories: string[] = [];
   loading :boolean = false;
   cartProducts : any[] = [];
   constructor(private service: ProductsService) { }

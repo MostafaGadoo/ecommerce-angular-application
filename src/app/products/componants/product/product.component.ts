@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { product_interface } from '../../models/products-model';
 
 @Component({
   selector: 'app-product',
@@ -7,14 +8,14 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class ProductComponent {
 
-  @Input() data : any = [];
+  @Input() data! : product_interface;
   @Output() item = new EventEmitter();
   addButton : boolean = false;
   amount : number =0;
   constractor() { }
 
   ngOnInit(): void {
-
+    
   }
 
   addToCart(){
