@@ -11,7 +11,7 @@
         <button class="btn btn-success" *ngIf="!addButton" (click) ="addButton = true"> Add to cart</button>
         <div class="d-flex w-50" *ngIf="addButton">
             <input type="Quantity" class="form-control" [(ngModel)]="amount">
-            <button class="btn btn-danger  m-r-2" (click)="addToCart()"> Add </button>
+            <button class="btn btn-danger  m-r-2" (click)="addToCart();addButton = false "> Add </button>
         </div>
         <span class="span-data">{{data.price}} L.E</span>
     </div>
